@@ -1,44 +1,36 @@
 <a id="kakao-link-btn" href="javascript:sendLink()">
-<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
 </a>
 <script type="text/javascript">
-  //<![CDATA[
-    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
-    Kakao.init('d642006f2ee698ec7291160eacab0c2c');
-    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-    Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',  // 컨테이너는 아까 위에 버튼이 쓰여진 부분 id 
+  function sendLink() {
+    Kakao.Link.sendDefault({
       objectType: 'feed',
-      content: {  // 여기부터 실제 내용이 들어갑니다. 
-        title: '딸기 치즈 케익', // 본문 제목
-        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',  // 본문 바로 아래 들어가는 영역?
-        imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png', // 이미지
+      content: {
+        title: 'Blackcats4567 오픈채팅방',
+        description: '마인크래프트, 프로그래밍에 관심있는 분들은 꼭 들어오세요!',
+        imageUrl:
+          'https://www.blackcats4567.com/assets/images/blackcats4567-96x96.png',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          webUrl: 'https://developers.kakao.com'
-        }
+          mobileWebUrl: 'https://www.blackcats4567.com/',
+          webUrl: 'https://www.blackcats4567.com/',
+        },
       },
-      social: {  /* 공유하면 소셜 정보도 같이 줄 수 있는데, 이 부분은 기반 서비스마다 적용이 쉬울수도 어려울 수도 있을듯 합니다. 전 연구해보고 안되면 제거할 예정 (망할 google  blogger...) */
+      social: {
         likeCount: 999,
         commentCount: 999,
-        sharedCount: 999
+        sharedCount: 99,
       },
       buttons: [
         {
-          title: '웹으로 보기',
+          title: '참여하기',
           link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com'
-          }
+            mobileWebUrl: 'https://www.blackcats4567.com/',
+            webUrl: 'https://www.blackcats4567.com/',
+          },
         },
-        {
-          title: '앱으로 보기',
-          link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com'
-          }
-        }
-      ]
-    });
-  //]]>
-</script> 
+      ],
+    })
+  }
+</script>
