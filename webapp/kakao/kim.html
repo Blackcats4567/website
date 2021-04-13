@@ -1,0 +1,47 @@
+  
+<html>
+<head>
+	<title>카카오톡</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+	<p>Custom</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('ce56b2e0ef7be9f0ed798cc3f16de66c');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '김윤아, "나는 착해" 발언... 충격',
+        description: '지금 바로 뉴스를 확인해보세요',
+        imageUrl:
+          'https://image.imnews.imbc.com/page/include/images/meta_image.png',
+        link: {
+          mobileWebUrl: 'https://www.naver.com',
+          webUrl: 'https://www.naver.com',
+        },
+      },
+      social: {
+        likeCount: 99999,
+        commentCount: 99999,
+        sharedCount: 99999,
+      },
+      buttons: [
+        {
+          title: '지금 바로 확인하기',
+          link: {
+            mobileWebUrl: 'https://www.naver.com',
+            webUrl: 'https://www.naver.com',
+          },
+        },
+      ],
+    })
+  }
+</script>
+  </body>
+</html>
