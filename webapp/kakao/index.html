@@ -1,0 +1,50 @@
+<script type='text/javascript'>
+Kakao.init('03b6f30448f0a57789ef35aaeb0648d8');
+	
+	
+	function link_kakao(img,price,text) { 
+		
+		var sh_title = ""; 
+		
+		
+
+		if(text == 'text'){
+			var sh_desc = "Blackcats4567 카카오톡 오픈채팅방에 참여해보세요"; 
+		} else {
+			var sh_desc = "Blackcats4567 카카오톡 오픈채팅방에 참여해보세요"; 
+		}
+		
+		Kakao.Link.sendDefault({ 
+			objectType: 'feed', 
+			content: { 
+				title: sh_title, 
+				description: sh_desc, 
+				imageUrl: 'https://www.digncore.xyz/assets/images/blackcats4567-300x300.png', 
+				imageWidth: 120,
+                        imageHeight: 120,
+				link: { 
+					mobileWebUrl: "https://open.kakao.com/o/gWSPmMWc", 
+					webUrl: "https://open.kakao.com/o/gWSPmMWc" 
+				 } 
+				 
+			}, 
+			buttons: [
+                        {
+                            title: '받기',
+                            link: {
+                                mobileWebUrl: 'http://bank.testpang.com/result.php',
+                            },
+                        },
+                    ],
+		}); 
+	}
+</script>
+	<div id="coupon-list">
+		
+		<ul class="list">
+			<li>
+				<a href="#none" onclick="link_kakao('./images/bank.png','5,000')"><img src="./images/bank.png"><span><strong>Blackcats4567 카카오톡 오픈채팅방</strong>에 가입해보세요</span></a>
+			</li>
+		</ul>
+	</div>
+		
