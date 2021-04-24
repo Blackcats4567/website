@@ -20,7 +20,28 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link href="assets/fonts/style.css" rel="stylesheet">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
+  <script>
+    var langs = {
+  en: {
+    one1: 'South Korea Student YT &amp; DEV'
+  },
+  ko: {
+    one1: '대한민국 학생 유튜버 &amp; 개발자'
+  }
+};
+
+if (getLanguage() === 'ko-KR' || getLanguage() === 'ko') {
+  var elem = $('[data-lang]');
+  for(var i = 0; i < elem.length ; i++) {
+    var text = elem.eq(i).attr('data-lang');
+    elem.eq(i).html(text);
+  }
+}
+
+function getLanguage() {
+  return navigator.language || navigator.userLanguage;
+}
+  </script>
   
   
   
@@ -70,7 +91,7 @@
             <div class="col-12 col-lg-5">
                 <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Blackcats4567</strong></h1>
                 
-                <p class="mbr-text mbr-fonts-style display-7">South Korea Student YT &amp; DEV</p>
+                <p class="mbr-text mbr-fonts-style display-7" data-lang="one1">South Korea Student YT &amp; DEV</p>
                 <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="https://www.blackcats4567.com/play.html">PLAY NOW</a> <a class="btn btn-primary display-4" href="https://www.youtube.com/watch?v=tjU04WjHRSM">VIEW LAST VIDEO</a></div>
             </div>
         </div>
